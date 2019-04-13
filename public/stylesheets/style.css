@@ -1,8 +1,18 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: black;
+  color: white;
 }
 
 a {
   color: #00B7FF;
+}
+
+.responsive{
+  max-width: 40%;
+  height: auto;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-bottom: 5%
 }
