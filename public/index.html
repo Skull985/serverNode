@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home Page</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+    <script type="text/javascript" src="javascripts/principale.js"></script>
+
+
+</head>
+
+<body>
+    <div class="container" ng-app="home" ng-controller="Principale as P">
+        <header>
+
+        </header>
+        <div class="row">
+            <div class="col align-self-center">
+                <img src="/images/skull.png" class="responsive" />
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-5">
+                <input class="form-control" type="text" placeholder="User" ng-model="P.user" /><br />
+                <input class="form-control" type="password" placeholder="password" ng-model="P.pass" /> <br />
+
+            </div>
+        </div>
+        <div class="row justify-content-end">
+            <div class="col-md-5 coll-sm-2">
+                <button class="btn btn-primary" ng-click="P.vedi()">Invio</button> <br />
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+</body>
