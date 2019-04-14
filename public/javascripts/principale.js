@@ -1,12 +1,12 @@
 var app = angular.module("home", []);
 var user = "";
 var pass = "";
-var url =' ';
-var localHost = true;
-if (localHost){
+var url = ' ';
+var localHost = false;
+if (localHost) {
     url = 'http://localhost:3030';
 }
-else{
+else {
     url = 'http://192.168.1.5:3030';
 }
 app.controller("Principale", function ($http) {
@@ -20,7 +20,7 @@ app.controller("Principale", function ($http) {
                 'Content-Type': 'application/json'
             }
         };
-        $http.post(url+'/login', data, config).then(function (response) {
+        $http.post(url + '/login', data, config).then(function (response) {
             console.log("La risposta che arriva dal server: " + response.data);
             //console.log(response.query);
         });
