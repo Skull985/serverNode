@@ -1,6 +1,14 @@
 var app = angular.module("home", []);
 var user = "";
 var pass = "";
+var url =' ';
+var localHost = true;
+if (localHost){
+    url = 'http://localhost:3030';
+}
+else{
+    url = 'http://192.168.1.5:3030';
+}
 app.controller("Principale", function ($http) {
     this.vedi = function () {
         var data = {
@@ -12,9 +20,9 @@ app.controller("Principale", function ($http) {
                 'Content-Type': 'application/json'
             }
         };
-        $http.post('http://localhost:3030/login', data, config).then(function (response) {
+        $http.post(url+'/login', data, config).then(function (response) {
             console.log("La risposta che arriva dal server: " + response.data);
-            //console.log(data);
+            //console.log(response.query);
         });
     };
 
